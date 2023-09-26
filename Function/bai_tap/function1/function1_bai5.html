@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm ngôi sao</title>
+</head>
+<body>
+<script>
+        function checkStar() {
+            let keyWord = prompt("Nhập tên ngôi sao")
+            let ar1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            let n = ar1.length;
+            let ar2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            let indexAr2 = -1;
+            for (let i = 0; i < n; i++) {
+                if (ar1[i] === keyWord) {
+                    indexAr2 = i;
+                    break;
+                }
+            }
+
+            if (indexAr2 != -1) {
+                alert("Ngôi sao " + keyWord + " thuộc chòm sao " + ar2[indexAr2]);
+            } else {
+                alert("không tìm thấy")
+            }
+        }
+
+        checkStar()
+</script>
+</body>
+</html>

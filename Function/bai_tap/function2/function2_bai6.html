@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<h4>Kiểm tra số nguyên dương</h4>
+<script>
+    function checkInteger(a){
+        return (Number.isInteger(a) && a > 0);
+    }
+    let n = +prompt("Nhập số bất kỳ");
+    alert(checkInteger(n))
+</script>
+</body>
+</html>

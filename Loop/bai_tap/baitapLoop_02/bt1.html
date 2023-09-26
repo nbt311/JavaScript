@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in dãy fibonacci</title>
+</head>
+<body>
+<h1>In dãy fibonacci</h1>
+<script>
+    let a = 0;
+    let b = 1;
+    document.write(a + " ")
+    document.write(b + " ")
+    let fibonacci ="";
+    let n = +prompt("Nhập số bất kỳ")
+    for (let i = 0; i < n; i++) {
+        fibonacci = a + b;
+        a = b;
+        b = fibonacci;
+        document.write(fibonacci + " ")
+    }
+</script>
+</body>
+</html>

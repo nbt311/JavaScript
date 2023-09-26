@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập vòng lặp 1</title>
+</head>
+<input type="button" id="bai1" value="Bai 1" onclick="bai1()" style="width: 50px">Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</input><br/>
+<input type="button" id="bai2" value="Bai 2" onclick="bai2()" style="width: 50px">Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại</input><br/>
+<input type="button" id="bai3" value="Bai 3" onclick="bai3()" style="width: 50px">in ra 20 số fibonacci đầu tiên</input><br/>
+<input type="button" id="bai4" value="Bai 4" onclick="bai4()" style="width: 50px">Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</input><br/>
+<input type="button" id="bai5" value="Bai 5" onclick="bai5()" style="width: 50px">Tính tổng của 20 số đầu tiên trong dãy fibonacci.</input><br/>
+<input type="button" id="bai6" value="Bai 6" onclick="bai6()" style="width: 50px">Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</input><br/>
+<input type="button" id="bai7" value="Bai 7" onclick="bai7()" style="width: 50px">Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</input><br/>
+
+<body>
+<script>
+    function bai1(){
+        let i = 1;
+        for (i= 1; i <= 100; i++){
+            document.write(i +"<br>");
+            if (i === 99){
+                alert('Đã hoàn thành');
+            }
+        }
+
+    }
+
+    function bai2(){
+        let a = +prompt("Nhập nhiệt độ hiện tại")
+        while (a < 20 || a > 100){
+            if (a < 20){
+                alert("Hãy tăng nhiệt độ");
+                a = +prompt("Nhập nhiệt độ hiện tại")
+            }else if (a > 100){
+                alert("Hãy giảm nhiệt độ");
+                a = +prompt("Nhập nhiệt độ hiện tại")
+            }
+        }
+        alert("Nhiệt độ bình thường")
+    }
+    function bai3() {
+        let a = 0, b = 1;
+        document.write(a + "<br>")
+        document.write(b + "<br>")
+        let temp;
+        for (let i = 0; i < 18; i++) {
+            temp = a + b;
+            a = b
+            b = temp
+            document.write(temp + "<br>")
+        }
+        // let fibonacci = "";
+        // for (let i = 0; i < 20; i++) {
+        //     document.write(a + " ")
+        //     fibonacci = a + b
+        //         a = b
+        //         b = fibonacci
+        // }
+
+    }
+    function bai4() {
+        let a = 0, b = 1;
+        let fibonacci = "";
+        let chia5 = "";
+        for (let i = 0;i < 20; i++){
+            fibonacci = a + b;
+            a = b;
+            b = fibonacci;
+            if (a%5===0){
+                chia5 = a;
+                break;
+            }
+        }
+        document.write("Số nguyên tố đầu tiên chia hết cho năm là " + chia5);
+    }
+
+    function bai5(){
+        let a = 0, b = 1;
+        let sum = 0;
+        let fibonacci = "";
+        for (i=0;i<19;i++){
+            fibonacci = a + b;
+            a = b;
+            b = fibonacci;
+            sum = sum + a;
+        }
+        document.write("Tổng 20 số nguyên tố đầu tiên là " + sum);
+    }
+    function bai6(){
+        let total = 0;
+        let dayso = "";
+        for (i=1;i<30;i++){
+            if(i%7===0){
+                dayso += i + " "
+                total += i;
+            }
+        }
+        document.write(dayso + "<br>");
+        document.write("Tổng bằng = " +total);
+
+    }
+
+    function bai7(){
+        for (i=1;i<=100;i++){
+            if(i%3===0 && i%5===0){
+                document.write(i + "FizzBuzz <br>")
+            }else if(i%3===0){
+                document.write(i + "Fizz <br>")
+            }else if (i%5===0) {
+                document.write(i + "Buzz <br>")
+            }else {
+                document.write(i + "<br>")
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên đầu tiên</title>
+</head>
+<body>
+<h1>Hiển thị các số nguyên tố đầu tiên</h1>
+<script>
+    function isPrime(a){
+        if (a == 2){
+            return true;
+        }
+        for (let i = 2; i < a;i++){
+            if (a % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    let m = +prompt("Nhập số");
+    let count = 1;
+    let i = 2;
+    while ( count <= m){
+        if (isPrime(i)){
+            document.write(i + " ");
+            count ++;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>

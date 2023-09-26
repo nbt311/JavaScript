@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bảng nâng cao</title>
+    <link rel="stylesheet" href="../../GitProject/css/banco.css">
+</head>
+<body>
+<div class="container">
+
+    <div id="box_caro">
+    </div>
+    <table class="table_row1">
+        <tr>
+            <th class="row1">1</th>
+            <th class="row1">2</th>
+            <th class="row1">3</th>
+            <th class="row1">4</th>
+            <th class="row1">5</th>
+            <th class="row1">6</th>
+            <th class="row1">7</th>
+            <th class="row1">8</th>
+        </tr>
+    </table>
+    <p class="text_a">A</p>
+    <p>B</p>
+    <p>C</p>
+    <p>D</p>
+    <p>E</p>
+    <p>F</p>
+    <p>G</p>
+    <p>H</p>
+</div>
+<input type="number" id="number1">+
+<input type="number" id="number2">
+<button onclick="sum()">=</button>
+<p id="result">
+
+</p>
+<script src="/js/banco.js" >
+    function sum(){
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let c = a +b;
+        document.getElementById('result').innerHTML = c;
+    }
+    </script>
+</body>
+</html>

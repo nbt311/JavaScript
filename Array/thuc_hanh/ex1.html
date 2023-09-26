@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let arr=[1,2,3,1,2,4,6,4,1]
+   let n = arr.length;
+   let newarr = [];
+   for (let i = 0; i < n; i++) {
+       let itemcheck = arr[i];
+       for (let j = i + 1; j < n ; j++) {
+           if (itemcheck == arr[j] && newarr.indexOf(arr[j])  == -1) {
+               newarr.push(itemcheck)
+           }
+       }
+   }
+   console.log(newarr)
+</script>
+</body>
+</html>

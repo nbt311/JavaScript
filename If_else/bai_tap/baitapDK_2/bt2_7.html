@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2</h1>
+<input type="number" id="number1" placeholder="Nhập số thứ 1"/>
+<input type="number" id="number2" placeholder="Nhập số thứ 2"/>
+<input type="number" id="number3" placeholder="Nhập số thứ 3"/>
+<button onclick="solveEquation()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function solveEquation() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let c = +document.getElementById('number3').value;
+        let delta = (b*b) - (4*a*c) ;
+        if (a === 0){
+            if (b === 0){
+                if (c === 0){
+                    document.getElementById('result').innerHTML = "Phương trình có vô số nghiệm";
+                }else {
+                    document.getElementById('result').innerHTML = "Phương trình vô nghiệm";
+                }
+            }else {
+                document.getElementById('result').innerHTML = "Phương trình có nghiệm x = " + -c/b;
+            }
+        }else if (delta < 0 ){
+            document.getElementById('result').innerHTML = "Phương trình vô nghiệm";
+        }else if(delta === 0){
+            document.getElementById('result').innerHTML = "Phương trình có ngiệm kép x1=x2= " + -b/(2*a);
+        }else {
+            let x1 = (-b + Math.sqrt(delta))/(2*a);
+            let x2 = (-b - Math.sqrt(delta))/(2*a);
+            document.getElementById('result').innerHTML = "Phương trình có 2 nghiệm " + "x1 = " + x1 + " và x2 = " + x2;
+        }
+    }
+</script>
+</body>
+</html>

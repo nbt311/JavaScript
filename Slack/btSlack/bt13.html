@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược chuỗi ký tự</title>
+</head>
+<body>
+<h1>Đảo ngược chuỗi ký tự</h1>
+<script>
+    let string = prompt("Nhập chữ bất kỳ");
+    let newString = "";
+    let a = string.length-1;
+    for (let i = a; i >= 0; i--) {
+        newString += string[i];
+    }
+    document.write(newString)
+</script>
+</body>
+</html>

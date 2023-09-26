@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chèn dấu sau số chẵn</title>
+</head>
+<body>
+<h3>chèn dấu - sau số chẵn</h3>
+<script>
+    const num = prompt();
+    let n = num.split("")
+    const result = [];
+
+    for(let x = 0; x < n.length; x++)
+    {
+        if(n[x]%2 === 0 && n[x + 1] % 2 === 0)
+        {
+            result.push(n[x],'-');
+        }
+        else
+        {
+            result.push(n[x]);
+        }
+    }
+    console.log(result.join(''));
+    //console.log(result);
+</script>
+</body>
+</html>

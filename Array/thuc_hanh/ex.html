@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let arrNums = [1,2,4,5,67,7,8,9,10,11,12];
+    let n = arrNums.length;
+    function sum(array){
+        let total = 0;
+        for (const element of array) {
+            total += element;
+        }
+        return total;
+    }
+    let totalNums = sum(arrNums);
+    document.write("Tong = " + totalNums);
+</script>
+</body>
+</html>

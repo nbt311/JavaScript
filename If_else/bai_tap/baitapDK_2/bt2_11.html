@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+<input type="number" id="money" placeholder="Nhập thu nhập của bạn">
+<button onclick="checkTax()">Tính tiền thuế</button>
+<p id="result"></p>
+<script>
+    function checkTax() {
+        let income = +document.getElementById('money').value;
+        if (income <= 5000000){
+            document.getElementById('result').innerHTML = "Tiền thuế là: " + (income * 0.05);
+        }else if (income <= 10000000){
+            document.getElementById('result').innerHTML = "Tiền thuế là: " + (income * 0.1);
+        }else if (income <= 18000000){
+            document.getElementById('result').innerHTML = "Tiền thuế là: " + (income * 0.15);
+        }else if (income <= 32000000){
+            document.getElementById('result').innerHTML = "Tiền thuế là: " + (income * 0.2);
+        }else {
+            document.getElementById('result').innerHTML = "Tiền thuế là: " + (income * 0.3);
+        }
+    }
+</script>
+</body>
+</html>

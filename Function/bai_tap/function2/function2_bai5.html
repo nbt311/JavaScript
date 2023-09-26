@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 3 số bất kỳ, tìm số nhỏ nhất</title>
+</head>
+<body>
+<h4>Nhập 3 số bất kỳ, tìm số nhỏ nhất</h4>
+<script>
+    function checkNumber(num){
+        let arr = [];
+        for(let i= 0; i < num; i++){
+            arr[i] = +prompt("Nhập số bất kỳ");
+        }
+        arr.sort()
+        return arr[0];
+    }
+    let n = +prompt("Nhập số")
+    alert(checkNumber(n))
+</script>
+</body>
+</html>

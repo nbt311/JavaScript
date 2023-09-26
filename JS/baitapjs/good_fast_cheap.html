@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng Good-Fast-Cheap</title>
+</head>
+<body>
+<input type="checkbox" id="good" onclick="checkGood()"/>Good<br/>
+<input type="checkbox" id="cheap" onclick="checkCheap()"/>Cheap<br/>
+<input type="checkbox" id="fast" onclick="checkFast()"/>Fast<br/>
+
+<script>
+    function checkGood(){
+        let a = document.getElementById('good').checked;
+        let b = document.getElementById('cheap').checked;
+        if (a == true && b == true){
+            document.getElementById('fast').checked = false;
+        }
+    }
+    function checkCheap(){
+        let b = document.getElementById('cheap').checked;
+        let c = document.getElementById('fast').checked;
+        if (b == true && c == true){
+            document.getElementById('good').checked = false;
+        }
+    }
+    function checkFast(){
+        let a = document.getElementById('cheap').checked;
+        let c = document.getElementById('fast').checked;
+        if (a == true && c == true){
+            document.getElementById('cheap').checked = false;
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

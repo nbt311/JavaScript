@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <img src="../../GitProject/anh/cat1x1.jpg" alt="" id="image-1" data-id="cat" onclick="changeImage1()"/>
+    </div>
+    <div>
+        <img src="../../GitProject/anh/panda1x1.jpg" alt="" id="image-2" data-id="panda" onclick="changeImage2()"/>
+    </div>
+    <div>
+        <img src="../../GitProject/anh/monkey1x1.jpg" alt="" id="image-3" data-id="monkey" onclick="changeImage3()"/>
+    </div>
+    <div>
+        <img src="../../GitProject/anh/cat4x1.jpg" alt="" id="image-4" data-id="cat" onclick="changeImage4()"/>
+    </div>
+    <div>
+        <img src="../../GitProject/anh/panda5x1.jpg" alt="" id="image-5" data-id="panda" onclick="changeImage5()"/>
+    </div>
+</div>
+<script>
+    function changeImage1(){
+        let image = document.getElementById("image-1");
+        let typeImage = image.getAttribute("data-id");
+        if (typeImage === 'cat') {
+            image.src="../anh/panda1x1.jpg";
+            image.setAttribute('data-id','panda')
+        }else if (typeImage === 'panda'){
+            image.src="../anh/monkey1x1.jpg";
+            image.setAttribute('data-id','monkey');
+        }else {
+            image.src="../anh/cat1x1.jpg";
+            image.setAttribute('data-id','cat');
+        }
+        checkWin();
+    }
+    function changeImage2(){
+        let image = document.getElementById("image-2");
+        let typeImage = image.getAttribute("data-id");
+        if (typeImage === 'cat') {
+            image.src="../anh/panda2x1.jpg";
+            image.setAttribute('data-id','panda')
+        }else if (typeImage === 'panda'){
+            image.src="../anh/monkey2x1.jpg";
+            image.setAttribute('data-id','monkey')
+        }else {
+            image.src="../anh/cat2x1.jpg";
+            image.setAttribute('data-id','cat')
+        }
+        checkWin();
+    }
+    function changeImage3(){
+        let image = document.getElementById("image-3");
+        let typeImage = image.getAttribute("data-id");
+        if (typeImage === 'cat') {
+            image.src="../anh/panda3x1.jpg";
+            image.setAttribute('data-id','panda')
+        }else if (typeImage === 'panda'){
+            image.src="../anh/monkey3x1.jpg";
+            image.setAttribute('data-id','monkey')
+        }else {
+            image.src="../anh/cat3x1.jpg";
+            image.setAttribute('data-id','cat')
+        }
+        checkWin();
+    }
+    function changeImage4(){
+        let image = document.getElementById("image-4");
+        let typeImage = image.getAttribute("data-id");
+        if (typeImage === 'cat') {
+            image.src="../anh/panda4x1.jpg";
+            image.setAttribute('data-id','panda')
+        }else if (typeImage === 'panda'){
+            image.src="../anh/monkey4x1.jpg";
+            image.setAttribute('data-id','monkey')
+        }else {
+            image.src="../anh/cat4x1.jpg";
+            image.setAttribute('data-id','cat')
+        }
+        checkWin();
+    }
+    function changeImage5(){
+        let image = document.getElementById("image-5");
+        let typeImage = image.getAttribute("data-id");
+        if (typeImage === 'cat') {
+            image.src="../anh/panda5x1.jpg";
+            image.setAttribute('data-id','panda')
+        }else if (typeImage === 'panda'){
+            image.src="../anh/monkey5x1.jpg";
+            image.setAttribute('data-id','monkey')
+        }else {
+            image.src="../anh/cat5x1.jpg";
+            image.setAttribute('data-id','cat')
+        }
+        checkWin();
+    }
+    function checkWin(){
+        let image1 = document.getElementById("image-1");
+        let image2 = document.getElementById("image-2");
+        let image3 = document.getElementById("image-3");
+        let image4 = document.getElementById("image-4");
+        let image5 = document.getElementById("image-5")
+        let typeImage1 = image1.getAttribute("data-id");
+        let typeImage2 = image2.getAttribute("data-id");
+        let typeImage3 = image3.getAttribute("data-id");
+        let typeImage4 = image4.getAttribute("data-id");
+        let typeImage5 = image5.getAttribute("data-id");
+        if (typeImage1 === typeImage2 && typeImage2 === typeImage3 && typeImage3 === typeImage4 && typeImage4 === typeImage5){
+            image1.style.border = "2px solid red";
+            image2.style.border = "2px solid red";
+            image3.style.border = "2px solid red";
+            image4.style.border = "2px solid red";
+            image5.style.border = "2px solid red";
+
+        }else {
+            image1.style.border = "none";
+            image2.style.border = "none";
+            image3.style.border = "none";
+            image4.style.border = "none";
+            image5.style.border = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<h1>Tính diện tích hình chũ nhật</h1>
+<input type="number" name="number" id="length" placeholder="Nhập chiều dài"/>
+<input type="number" name="number" id="width" placeholder="Nhập chiều rộng"/>
+<button onclick="theArea()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function theArea() {
+        let a = +document.getElementById('length').value;
+        let b = +document.getElementById('width').value;
+        let area = a * b;
+        document.getElementById('result').innerHTML = "Diện tích = " + area;
+    }
+</script>
+</body>
+</html>

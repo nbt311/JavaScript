@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Slack</title>
+</head>
+<body>
+<input type="button" value="Bài 11" onclick="exam11()"/>Tính tổng các số chẵn trong mảng
+<p id="result"></p>
+
+<script>
+    let arr = [1,3,3,4,5,2,1,6,26,9,2,10,12,14,13];
+    let n = arr.length;
+    let sum = 0;
+    function exam11() {
+        for (let i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0){
+                sum += arr[i];
+            }
+        }
+        document.getElementById('result').innerHTML = sum;
+
+    }
+</script>
+</body>
+</html>

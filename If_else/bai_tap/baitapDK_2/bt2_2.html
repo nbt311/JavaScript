@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ mét sang feet</title>
+</head>
+<body>
+<h1> Chuyển từ mét sang feet</h1>
+<input type="number" name="number" id="m"/>
+<button onclick="convertM()">Convert</button>
+<p id="result"></p>
+<script>
+    function convertM() {
+        let m = +document.getElementById('m').value;
+        let ft = m * 3.2808;
+        document.getElementById('result').innerHTML = ft;
+    }
+</script>
+</body>
+</html>

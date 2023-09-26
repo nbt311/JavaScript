@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông</h1>
+<input type="number" name="number" id="edge"/>
+<button onclick="theArea()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function theArea() {
+        let a = +document.getElementById('edge').value;
+        let area = a * a;
+        document.getElementById('result').innerHTML = "Diện tích = " + area;
+    }
+</script>
+</body>
+</html>

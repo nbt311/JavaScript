@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<h1>Xếp hạng học lực</h1>
+<input type="number" id="score1" placeholder="Nhập điểm thi 45p"/><br/>
+<input type="number" id="score2" placeholder="Nhập điểm thi giữ kỳ"/><br/>
+<input type="number" id="score3" placeholder="Nhập điểm thi cuối kỳ"/><br/>
+<button onclick="checkScore()">Check</button>
+<p id="result"></p>
+<script>
+    function checkScore(){
+        let a = +document.getElementById('score1').value;
+        let b = +document.getElementById('score2').value;
+        let c = +document.getElementById('score3').value;
+        let mediumScore = (a+b+c)/3;
+        if (mediumScore >= 8.5){
+            document.getElementById('result').innerHTML = "Học sinh giỏi";
+        }else if (mediumScore >= 6.5) {
+            document.getElementById('result').innerHTML = "Học sinh khá";
+        }else if (mediumScore >= 5){
+            document.getElementById('result').innerHTML = "Học sinh TB";
+        }else {
+            document.getElementById('result').innerHTML = "Học sinh yếu";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =[1,2,3]
+    let max = arr[0];
+    let min = arr[0];
+    let sum = arr[0];
+    let avg;
+    let arrnew=[];
+    for (let i = 1; i < arr.length; i++){
+        if (max < arr[i]){
+            max = arr[i]
+        }if (min < arr[i])
+        {
+            min = arr[i];
+        }
+        sum += arr[i]
+    }
+    avg = sum/arr.length;
+    arrnew.push(max,min,avg)
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra giá trị số nhập vào</title>
+</head>
+<body>
+<!--<script>
+    let value = prompt('Type a number', 0);
+    if (value > 0){
+        alert(1);
+    }else if(value < 0){
+        alert(-1);
+    } else {
+        alert(0)
+    }
+</script>-->
+<script>
+    let value = +prompt('Type a number', 0);
+    switch (value === 0 ? value = 'p' : value > 0){
+        case 'p':
+            alert(0);
+            break;
+        case true:
+            alert(1);
+            break;
+        default:
+            alert(-1);
+    }
+</script>
+</body>
+</html>

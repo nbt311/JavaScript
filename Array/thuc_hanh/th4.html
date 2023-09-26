@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm phần tử lớn nhất</title>
+</head>
+<body>
+<script>
+    let arrNums = [1, 2, 3, 4, 5, 67, 7, 8, 9, 10, 11, 12]
+    let maxNums = arrNums[0];
+    let minNums = arrNums[0];
+    let n = arrNums.length;
+    let index = 0
+    for (let i = 0; i < n; i++) {
+        if (maxNums < arrNums[i]){
+            maxNums = arrNums[i];
+            index = i;
+        }
+    }
+    document.write("max = " + maxNums + " at position " + index);
+</script>
+
+</body>
+</html>

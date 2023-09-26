@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="keyword" placeholder="Nhập chữ tiếng Anh"/>
+<button onclick="checkKeyword()">Search</button>
+<p id="result"></p>
+<script>
+    function checkKeyword() {
+        let keyword = document.getElementById('keyword').value;
+        let en = ["hi", "bye"];
+        let n = en.length;
+        let vi = ["xin chào", "tạm biệt"];
+        let indexVi = -1;
+        let indexEn = -1;
+        for (let i = 0; i < n; i++) {
+            if (en[i] === keyword) {
+                indexVi = i;
+                break;
+            }
+            if (vi[i] === keyword) {
+                indexEn = i;
+            }
+        }
+
+        if (indexVi != -1) {
+            document.getElementById('result').innerHTML = vi[indexVi];
+        } else if(indexEn != -1){
+            document.getElementById('result').innerHTML = en[indexEn];
+        }else {
+            document.getElementById('result').innerHTML = "Không tìm thấy";
+        }
+    }
+
+</script>
+</body>
+</html>

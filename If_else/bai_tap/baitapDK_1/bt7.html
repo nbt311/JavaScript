@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<input type="number" id="minute1" placeholder="Nhập số phút đã gọi"/>
+<button onclick="checkMoney();">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    function checkMoney() {
+        let a = 25000;
+        let minute1 = +document.getElementById("minute1").value;
+        if (minute1 <= 50) {
+            document.getElementById('result').innerHTML = "Giá cước là: " + ((minute1 * 600) + a);
+        } else if (minute1 <= 150) {
+            document.getElementById('result').innerHTML = "Giá cước là: " + (((minute1 - 50) * 400 + 50 * 600) + a);
+        } else {
+            document.getElementById('result').innerHTML = "Giá cước là: " + (((minute1 - 200) * 200 + 150 * 400 + 50 * 600) + a);
+        }
+    }
+</script>
+</body>
+</html>

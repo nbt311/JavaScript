@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 1</h1>
+<input type="number" name="number" id="number1"/>
+<input type="number" name="number" id="number2"/>
+<button onclick="checkResult()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function checkResult() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        if (a === 0){
+            if ( b === 0) {
+                document.getElementById('result').innerHTML = "Phương trình có vô số nghiệm";
+            }else {
+                document.getElementById('result').innerHTML = "Phương trình vô nghiệm";
+            }
+        }else {
+            document.getElementById('result').innerHTML = "Phương trình có nghiệm x = " + -b/a;
+        }
+    }
+</script>
+
+
+</body>
+</html>

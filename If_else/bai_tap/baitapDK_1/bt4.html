@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong 3 số</title>
+</head>
+<body>
+<input type="number" name="number" id="number1" placeholder="Nhập số thứ 1"/>
+<input type="number" name="number" id="number2" placeholder="Nhập số thứ 2"/>
+<input type="number" name="number" id="number3" placeholder="Nhập số thứ 3"/>
+<button onclick="checkNumber()">Check</button>
+<p id="result"></p>
+<script>
+    function checkNumber() {
+        let number1 = +document.getElementById("number1").value;
+        let number2 = +document.getElementById("number2").value;
+        let number3 = +document.getElementById("number3").value;
+        if (number1 > number2 && number1 > number3) {
+            document.getElementById("result").innerHTML = "Số " + number1 + " là số lớn nhất";
+        }else if (number2 > number3){
+            document.getElementById("result").innerHTML = "Số " + number2 + " là số lớn nhất";
+        }else {
+            document.getElementById("result").innerHTML = "Số " + number3 + " là số lớn nhất";
+        }
+    }
+
+</script>
+</body>
+</html>

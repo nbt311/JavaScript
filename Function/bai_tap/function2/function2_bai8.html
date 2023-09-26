@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng số nguyên</title>
+</head>
+<body>
+<h4>Đảo ngược mảng số nguyên</h4>
+<script>
+    function reverseArr(num){
+        let arr = [];
+        for(let i = 0;i < num; i++){
+            arr[i] = +prompt("Nhập số bất kỳ");
+        }
+        arr.reverse();
+        return arr;
+    }
+    let n = +prompt("Nhập số bất kỳ");
+    alert(reverseArr(n));
+
+</script>
+</body>
+</html>

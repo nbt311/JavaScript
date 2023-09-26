@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuôi</title>
+</head>
+<body>
+<input type="number" name="number" id="old" placeholder="Nhập số tuổi"/>
+<button onclick="checkOld()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    function checkOld() {
+        let old = +document.getElementById('old').value;
+        if (old >= 15 ){
+            document.getElementById('result').innerHTML = "Đủ điều kiện vào lớp 10";
+        }else{
+            document.getElementById('result').innerHTML =" Không đủ điều kiện";
+        }
+
+    }
+</script>
+</body>
+</html>

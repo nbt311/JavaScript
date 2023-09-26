@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 số</title>
+</head>
+<body>
+<h4> Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h4>
+<script>
+    function reverseNum(a,b){
+        let c = a
+         a = b;
+         b = c;
+         return a + "" + b
+    }
+    let n = +prompt("Nhập số bất kỳ");
+    let m = +prompt("Nhập số bất kỳ");
+    alert(reverseNum(n,m));
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất trong mảng</title>
+</head>
+<body>
+<h1> Tìm giá trị nhỏ nhất trong mảng</h1>
+<button onclick="checkNum1()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8]
+    let arr2 = [7, 12, 6, 9, 20, 56, 89]
+    let arr3 = [];
+    let arr5 = [-1];
+    let arr4 = [0, 0, 0, 0, 0, 0];
+
+
+
+    function checkNum(arr) {
+        if (arr.length == 0){
+            return "Mảng rỗng";
+        }
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+    function checkNum1(){
+            document.getElementById("result").innerHTML = checkNum(arr5);
+    }
+
+
+</script>
+</body>
+</html>

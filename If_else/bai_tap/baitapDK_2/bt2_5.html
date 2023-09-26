@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông</title>
+</head>
+<body>
+<h1> Tính diện tích tam giác vuông</h1>
+<input type="number" id="side1" placeholder="Nhập cạnh a"/>
+<input type="number" id="side2" placeholder="Nhập cạnh b"/>
+<button onclick="theArea()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function theArea() {
+        let a = +document.getElementById('side1').value;
+        let b = +document.getElementById('side2').value;
+        let area = 1/2 * ( a * b );
+        document.getElementById('result').innerHTML = "Diện tích = " +area;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng ký học viên</title>
+    <link rel="stylesheet" href="/css/formdangki.css">
+</head>
+<body>
+<form action="https://www.google.com.vn/?hl=vi" method="post">
+<fieldset>
+    <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+    <table>
+        <tr>
+            <th><label for="yourname">Họ và Tên</label></th>
+            <td><input type="text" id="yourname" name="yourname"></td>
+        </tr>
+        <tr>
+            <th><label for="birthday">Ngày Sinh</label></th>
+            <td><input type="date" id="birthday" name="date"></td>
+        </tr>
+        <tr>
+            <th><label for="gender">Giới tính</label></th>
+            <td><input type="radio" id="gender" name="gender" checked/>Nam
+            <label><input type="radio" name="gender"/></label>Nữ</td>
+        </tr>
+        <tr>
+            <th style="vertical-align: top"><label for="location">Địa chỉ</label></th>
+            <td><textarea name="location" id="location" cols="30" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <th><label for="class">Lớp</label></th>
+            <td><select name="class" id="class">
+                <option value="">-Chọn Lớp-</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="email">Email</label></th>
+            <td><input type="text" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <th rowspan="2" style="vertical-align: top"><label for="phone">Điện thoại</label></th>
+            <td><input type="text" id="phone" name="phone"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><label><input type="button" name="submit" value="Đăng ký"></label>
+                <label><input type="reset" name="reset" value="Nhập Lại"></label>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+</form>
+</body>
+</html>

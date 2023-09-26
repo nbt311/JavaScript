@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="screen" value=""/></td>
+    </tr>
+    <tr>
+        <td><button onclick="setScreen(1)">1</button></td>
+        <td><button onclick="setScreen(2)">2</button></td>
+        <td><button onclick="setScreen(3)">3</button></td>
+        <td><button onclick="setScreen('+')">+</button></td></tr>
+    <tr>
+        <td><button onclick="setScreen(4)">4</button></td>
+        <td><button onclick="setScreen(5)">5</button></td>
+        <td><button onclick="setScreen(6)">6</button></td>
+        <td><button onclick="setScreen('-')">-</button></td></tr>
+    <tr>
+        <td><button onclick="setScreen(7)">7</button></td>
+        <td><button onclick="setScreen(8)">8</button></td>
+        <td><button onclick="setScreen(9)">9</button></td>
+        <td><button onclick="setScreen('*')">x</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="xoa()">C</button></td>
+        <td><button onclick="setScreen(0)">0</button></td>
+        <td><button onclick="caculator()">=</button></td>
+        <td><button onclick="setScreen('/')">/</button></td>
+    </tr>
+
+
+</table>
+<script>
+    function setScreen (value){
+        document.getElementById("screen").value += value;
+    }
+    function caculator() {
+        let valueInput = document.getElementById("screen").value;
+        let result = eval(valueInput);
+        document.getElementById("screen").value = result;
+    }
+    function xoa(){
+        document.getElementById("screen").value = " ";
+    }
+</script>
+</body>
+</html>

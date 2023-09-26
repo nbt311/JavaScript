@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nhập vào</title>
+</head>
+<body>
+<h1>Kiểm tra số nhập vào có phải tuổi 1 người không</h1>
+<input type="number" id="old" placeholder="Nhập số tuổi"/>
+<button onclick="checkOld()">Check</button>
+<p id="result"></p>
+<script>
+    function checkOld() {
+        let a = +document.getElementById('old').value;
+        if (a > 0 && a <= 120) {
+            document.getElementById('result').innerHTML = +a + " là số tuổi của bạn";
+        } else {
+            document.getElementById('result').innerHTML = +a + " không phải là số tuổi";
+        }
+    }
+</script>
+</body>
+</html>

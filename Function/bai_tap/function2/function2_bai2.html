@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích, chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    function  areaCicle(r) {
+        let area =  r * r * 3.14;
+        return area;
+    }
+    function  perimeterCicle(r) {
+        let perimeter = r * 2 * 3.14;
+        return perimeter;
+    }
+    let n = +prompt("Nhập số bất kỳ");
+    alert("Bán kình hình tròn là: " + areaCicle(n));
+    alert("Chu vi hình tròn là: " + perimeterCicle(n));
+</script>
+</body>
+</html>

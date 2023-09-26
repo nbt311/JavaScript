@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me</title>
+    <style>
+       .container {
+           width: 100%;
+           text-align: center;
+       }
+       #btn-no{
+           position: absolute;
+       }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Do you love me?</h2>
+    <button id="btn-yes" onclick="buttonYes()">Yes</button>
+    <button id="btn-no" onmouseover="hoverButtonNo()">No</button>
+</div>
+<script>
+    function getNumberRandom(max,min) {
+        return Math.floor(Math.random() *(max - min ) + min);
+    }
+    function hoverButtonNo() {
+        const btnNo = document.getElementById("btn-no");
+        const top = getNumberRandom(500,50);
+        const left = getNumberRandom(800,100);
+        btnNo.style.top = top + "px";
+        btnNo.style.left = left + "px";
+    }
+    function buttonYes() {
+        alert("Đồng Ý")
+    }
+</script>
+</body>
+</html>
