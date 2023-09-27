@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 1 bài 4</title>
+</head>
+<body>
+<h4>bài 4: khởi tạo/nhập vào mảng số nguyên và đảo ngược các phần tử trong mảng</h4>
+<script>
+    let n = +prompt("Nhập dộ dài của mảng");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+       arr[i] = +prompt("Nhập phần tử cho mảng");
+    }
+    //let arr = [1,2,4,5,6,7,8,9,10];
+    let first = 0;
+    let last = arr.length - 1;
+    while ( first < last ) {
+        let c = arr[first];
+        arr[first]=arr[last];
+        arr[last]=c;
+        first++;
+        last--;
+    }
+    document.write(arr)
+</script>
+</body>
+</html>

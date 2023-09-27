@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 1 bài 9</title>
+</head>
+<body>
+<h4>Bài 9: Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h4>
+
+<script>
+    let arrA=[];
+    let arrB=[];
+    for (let i = 0; i < 10; i++) {
+        arrA[i] = +prompt("Nhập phần tử cho mảng a");
+    }
+    for (let i = 0; i < 10; i++) {
+        arrB[i] = +prompt("Nhập phần tử cho mảng b");
+    }
+    document.write("Mảng a: " + arrA + "<br>");
+    document.write("Mảng b: " + arrB + "<br>");
+
+    let arrC = arrA.concat(arrB);
+    document.write("Mảng c: " + arrC);
+</script>
+</body>
+</html>

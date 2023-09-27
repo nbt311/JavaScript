@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 bài 3</title>
+</head>
+<body>
+<h4>Bài 3: Hiển thị giá trị lớn nhất trong mảng và in ra giá trị trung bình của mảng</h4>
+<script>
+    let n = +prompt("Nhập độ dài của mảng");
+    let arr = [];
+    let max = null;
+    let avg = 0;
+    let sum = 0
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhập số bất kỳ");
+        if (max < arr[i]){
+            max = arr[i];
+        }
+        sum += arr[i];
+        avg = sum / n;
+    }
+    document.write("Mảng vừa tạo: " + arr + "<br>");
+    document.write("Giá trị lớn nhất trong mảng là: " + max + "<br>");
+    document.write("Giá trị trung bình các phần tử trong mảng là: " + avg)
+
+</script>
+</body>
+</html>

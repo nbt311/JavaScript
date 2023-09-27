@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 1 bài 8</title>
+</head>
+<body>
+<h4>sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</h4>
+<script>
+    let arr = [];
+    let n = +prompt("Nhập độ dài cho mảng");
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhập phần tử cho mảng")
+    }
+    document.write("Mảng ban đầu: " + arr + "<br>");
+
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length ; j++) {
+            if (arr[i] < arr[j]){
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    document.write("Mảng sau khi sắp xếp: " + arr);
+</script>
+</body>
+</html>
