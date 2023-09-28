@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 2 bài 3</title>
+</head>
+<body>
+<h4>Bài 3: Chương trình này đếm số ký tự số trong mảng. </h4>
+
+<script>
+    let n = prompt("Nhập phần tử cho mảng")
+    let arr = n.split("");
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 1 == 0){
+            count++;
+        }
+    }
+    document.write("Số ký tự số trong mảng là: " + count);
+</script>
+</body>
+</html>
