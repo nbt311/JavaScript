@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,1,0,-1,-1]
+    function plusMinus() {
+        let count1 = 0;
+        let count2 = 0;
+        let count3 = 0;
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] < 0){
+                count1++;
+            }else if(arr[i] > 0){
+                count2++;
+            }else{
+                count3++;
+            }
+        }
+        let a = count1/arr.length;
+        let b = count2/arr.length;
+        let c = count3/arr.length;
+        return a.toFixed(6) + "<br>" + b.toFixed(6) + "<br>" + c.toFixed(6);
+    }
+
+    document.write(plusMinus())
+</script>
+</body>
+</html>

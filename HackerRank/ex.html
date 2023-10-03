@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [1,2,3],
+        [4,5,6],
+        [9,8,9]
+    ]
+    function diagonalDifference() {
+        let sumA = 0;
+        let sumB = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (i == j){
+                    sumA += arr[i][j]
+                }if ( i + j == arr.length - 1){
+                    sumB += arr[i][j]
+                }
+            }
+        }
+        console.log(sumA)
+        console.log(sumB)
+        let b = Math.abs(sumA - sumB);
+        return b;
+    }
+    console.log(diagonalDifference());
+</script>
+</body>
+</html>
