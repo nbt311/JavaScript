@@ -6,6 +6,7 @@ class Barricade{
     canvas;
     ctx;
     image;
+    cactus = [];
 
 
     constructor(x,y,width,height) {
@@ -13,14 +14,16 @@ class Barricade{
         this.y = y;
         this.width = width;
         this.height = height;
-        this.canvas = document.getElementById('canvas');
-        this.ctx = this.canvas.getContext('2d');
+        this.ctx = ctx;
+        this.canvas = ctx.canvas;
+
     }
 
     draw() {
         this.ctx.beginPath();
         this.image = document.getElementById('cactus1')
-        this.ctx.drawImage(this.image,this.x, this.y, this.width, this.height)
+        this.ctx.drawImage(this.image,this.x, this.y, this.width, this.height);
+
         this.ctx.closePath();
         // let img = new Image();
         // img.onload = () => {
@@ -29,24 +32,46 @@ class Barricade{
         // img.src = 'images/cactus_1.png';
     }
 
-    getRandomNumber(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
+    // getRandomNumber(min, max) {
+    //     return Math.floor(Math.random() * (max - min + 1) + min);
+    // }
 
     move(){
         this.ctx.fillStyle = "white";
-        //this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height )
-        let x = setInterval(() => {
-            if (this.x + this.width >= 0){
-                this.moveLeft();
-                this.draw()
+        this.moveLeft();
+            if (this.x + this.width > 0){
+                //this.draw()
 
+            }else{
+                this.x = 800;
+                this.y = 205;
             }
-        },2000)
-
+            //this.collideWith() ;
     }
 
     moveLeft(){
-        this.x -= 3;
+        this.x -= 10;
     }
+
+    // collideWith(Sprite){
+    //     if (this.collide() === true){
+    //         return this.showGameOver();
+    //     }
+    // }
+
+
+    collide() {
+
+        if (this.x + this.width > dino.x / 1.4 && this.x < (dino.x + dino.width) / 1.4
+            && this.y < (dino.y + dino.height)) {
+            return true;
+        }
+    }
+
+    reset(){
+        this.draw()
+    }
+
+
 }
+
