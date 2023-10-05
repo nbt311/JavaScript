@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<h4>Kiểm tra xem 1 chuỗi có nằm trong chuỗi còn lại không</h4>
+
+<script>
+let str1 = prompt('Nhập chuỗi bất kỳ');
+let str2 = prompt('Nhập chuỗi bất kỳ');
+let arr = str1.split(' ');
+let arr2 = str2.split(' ');
+let itemCheck;
+function checkStr() {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr[i] === arr2[j]) {
+                itemCheck = true;
+                break;
+            } else {
+                itemCheck = false;
+            }
+        }
+    }
+    return itemCheck;
+}
+document.write(checkStr(str1,str2));
+</script>
+</body>
+</html>

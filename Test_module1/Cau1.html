@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<h4>Tìm điểm thi cao thứ 3</h4>
+<script>
+let arr =[1,5,6,8,7,8,9,1,10,4,7,10];
+let n = arr.length;
+let max = arr[0];
+let max2 = arr[0];
+let max3 = arr[0];
+function checkScore(){
+    for (let i = 0; i < n ; i++) {
+        if (max < arr[i] && max2 < arr[i] && max3 < arr[i]){
+            max3 = max2;
+            max2 = max;
+            max = arr[i];
+        }
+    }
+    return max3;
+}
+document.write("Danh sách điểm thi: " +arr + "<br>" );
+document.write("Điểm cao thứ 3 là: " + checkScore(max3));
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Viết hàm tryRemoveFromArray()</h4>
+<script>
+let arr = [4,5,6,8,1,19,0,1];
+let index = +prompt("Nhập index")
+let newArr =[];
+function  tryRemoveFromArray() {
+    for (let i = 0; i < arr.length; i++) {
+        if (index !== i) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+document.write("Mảng ban đầu: " + arr + "<br>");
+document.write("Mảng sau khi check index: " + tryRemoveFromArray(index));
+</script>
+</body>
+</html>
